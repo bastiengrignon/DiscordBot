@@ -5,4 +5,4 @@ Use this link to connect to your Discord server : [Discord Bot Notify](https://d
 
 # Commands
 - `!ping`: Show latency
-- `!setChannel`: Modify the text channel where messages are send
+- `!setChannel channelID`: Modify the text channel where messages are send
