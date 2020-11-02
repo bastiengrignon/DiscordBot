@@ -1,0 +1,13 @@
+{
+  "name": "channel-bot",
+  "version": "1.0.0",
+  "description": "A bot to say a vocal message when entering a channel",
+  "main": "bot.js",
+  "author": "Wolfysh",
+  "scripts": {
+    "start": "node bot.js"
+  },
+  "dependencies": {
+    "discord.js": "^12.4.1"
+  }
+}
