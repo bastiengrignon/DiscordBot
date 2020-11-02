@@ -2,11 +2,11 @@ const Discord = require('discord.js')
 const auth = require('./auth.json')
 
 const leavingMessage = (userId, channelName) => {
-    return `<@${userId}> du channel ${channelName}`
+    return `<@${userId}> sort du channel ${channelName}`
 }
 
 const enteringMessage = (userId, channelName) => {
-    return `<@${userId}> arrive en petite tenue dans le channel ${channelName}`
+    return `<@${userId}> vient d'arriver sur  ${channelName}`
 }
 
 const client = new Discord.Client()
