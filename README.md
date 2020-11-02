@@ -6,3 +6,5 @@ Use this link to connect to your Discord server : [Discord Bot Notify](https://d
 # Commands
 - `!ping`: Show latency
 - `!setChannel channelID`: Modify the text channel where messages are send
+- `!enteringMessage` (`true` or `false`, _default_: `true`): Toggle message when joining a channel
+- `!leavingMessage` (`true` or `false`, _default_: `false`): Toggle message when leaving a channel
