@@ -40,7 +40,8 @@ client.on('message', (message) => {
         switch(args[0]) {
             // !ping
             case 'ping':
-                message.reply('Why are you doing this!').then()
+                const ping = Date.now() - message.createdTimestamp + "ms";
+                message.reply(`🏓Pong: ${ping}. \nAPI Latency is ${Math.round(client.ws.ping)}ms`).then()
                 break
         }
     }
