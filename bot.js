@@ -7,7 +7,7 @@ const leavingMessage = (userId, channelName) => {
 }
 
 const enteringMessage = (userId, channelName) => {
-    return `<@${userId}> vient d'arriver sur  ${channelName}`
+    return `<@${userId}> vient d'arriver sur ${channelName}`
 }
 
 const client = new Discord.Client()
