@@ -1,5 +1,6 @@
 const Discord = require('discord.js')
 const auth = require('./auth.json')
+let channelId = "772433272449007626"
 
 const leavingMessage = (userId, channelName) => {
     return `<@${userId}> sort du channel ${channelName}`
@@ -24,7 +25,7 @@ client.on("ready", () => {
 })
 
 client.on('voiceStateUpdate', (oldState, newState) => {
-    const channel = client.channels.cache.filter((channel) => channel.id === "772433272449007626").first()
+    const channel = client.channels.cache.filter((channel) => channel.id === channelId.toString()).first()
 
     if (oldState.channel === null && newState.channel !== null) {
         channel.send(enteringMessage(newState.member.user.id, newState.channel.name), {tts: true})
@@ -42,6 +43,10 @@ client.on('message', (message) => {
             case 'ping':
                 const ping = Date.now() - message.createdTimestamp + "ms";
                 message.reply(`🏓Pong: ${ping}. \nAPI Latency is ${Math.round(client.ws.ping)}ms`).then()
+                break
+            case 'setChannel':
+                channelId = args[1]
+                message.reply("Channel text updated" + message.channel).then()
                 break
         }
     }
